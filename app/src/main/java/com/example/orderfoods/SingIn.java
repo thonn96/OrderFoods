@@ -47,6 +47,7 @@ public class SingIn extends AppCompatActivity {
                         if(dataSnapshot.child(edtPhone.getText().toString()).exists()){
                             User user = dataSnapshot.child(edtPhone.getText().toString()).getValue(User.class);
 
+                            user.setPhone(edtPhone.getText().toString());
                             if(user.getPassword().equals(edtPassword.getText().toString())){
                                 //Toast.makeText(SingIn.this, "xxxxxxxxxx", Toast.LENGTH_SHORT).show();
                                 {
